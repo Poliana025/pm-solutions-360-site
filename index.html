@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Solutions Digital - Análise 360º</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+    <!-- Fixed Navigation Header -->
+    <nav class="fixed-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>PM Solutions Digital</h1>
+                <span class="nav-tagline">Análise 360º</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">🏠 Home</a></li>
+                <li><a href="#market" class="nav-link" data-section="market">📊 Pesquisa de Mercado</a></li>
+                <li><a href="#financial" class="nav-link" data-section="financial">💰 Análise Financeira</a></li>
+                <li><a href="#opportunities" class="nav-link" data-section="opportunities">🎯 Oportunidades</a></li>
+                <li><a href="#strategy" class="nav-link" data-section="strategy">🚀 Estratégia</a></li>
+                <li><a href="#investment" class="nav-link" data-section="investment">💎 Investimento</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section active">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">PM Solutions Digital</h1>
+                    <h2 class="hero-subtitle">Transformando Nutricionistas e Personal Trainers em Autoridades Digitais</h2>
+                    <p class="hero-description">Análise completa de mercado e projeção financeira para um investimento estratégico de alto retorno no nicho de saúde e fitness.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">294.000+</span>
+                            <span class="stat-label">Profissionais no Mercado</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">R$ 15.000</span>
+                            <span class="stat-label">Investimento Inicial</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">32%</span>
+                            <span class="stat-label">Crescimento Anual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <h3>💡 Automação Inteligente</h3>
+                            <p>ZAIA + Landing Pages otimizadas</p>
+                        </div>
+                        <div class="floating-card card-2">
+                            <h3>📈 Crescimento Garantido</h3>
+                            <p>Mercado em expansão acelerada</p>
+                        </div>
+                        <div class="floating-card card-3">
+                            <h3>🎯 Nicho Especializado</h3>
+                            <p>Foco em resultados mensuráveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Role para explorar</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- Market Research Section -->
+        <section id="market" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📊 Pesquisa de Mercado</h2>
+                <p class="section-subtitle">Análise completa do mercado de nutricionistas e personal trainers no Brasil</p>
+            </div>
+            
+            <div class="market-content">
+                <div class="market-size-container">
+                    <h3>Tamanho do Mercado</h3>
+                    <div class="market-stats-grid">
+                        <div class="market-stat-card">
+                            <h4>Nutricionistas</h4>
+                            <div class="stat-number">194.018</div>
+                            <div class="stat-growth">+22% em 3 anos</div>
+                            <ul class="stat-details">
+                                <li>94% são mulheres</li>
+                                <li>10 profissionais por 10 mil habitantes</li>
+                                <li>34 especialidades diferentes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="market-stat-card">
+                            <h4>Personal Trainers</h4>
+                            <div class="stat-number">100.000+</div>
+                            <div class="stat-growth">+32,76% em 1 ano</div>
+                            <ul class="stat-details">
+                                <li>Demanda por aulas personalizadas disparou</li>
+                                <li>600 mil profissionais de Ed. Física total</li>
+                                <li>50 mil empresas fitness cadastradas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="marketSizeChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="challenges-needs-container">
+                    <h3>Principais Desafios e Necessidades</h3>
+                    <div class="challenges-grid">
+                        <div class="challenge-category">
+                            <h4>Nutricionistas</h4>
+                            <div class="challenge-list">
+                                <div class="challenge-item">🎯 Competição com Influenciadores</div>
+                                <div class="challenge-item">📱 Engajamento e Retenção</div>
+                                <div class="challenge-item">🎨 Criação de Conteúdo</div>
+                                <div class="challenge-item">⚠️ Desinformação Online</div>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-category">
+                            <h4>Personal Trainers</h4>
+                            <div class="challenge-list">
+                                <div class="challenge-item">🏆 Diferenciação no Mercado</div>
+                                <div class="challenge-item">👑 Construção de Autoridade</div>
+                                <div class="challenge-item">💼 Vendas e Marketing</div>
+                                <div class="challenge-item">📅 Gestão de Conteúdo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Analysis Section -->
+        <section id="financial" class="section">
+            <div class="section-header">
+                <h2 class="section-title">💰 Análise Financeira</h2>
+                <p class="section-subtitle">Projeções detalhadas e análise de viabilidade do negócio</p>
+            </div>
+            
+            <div class="financial-content">
+                <div class="financial-overview">
+                    <div class="financial-card">
+                        <h3>Receitas (Serviços)</h3>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <span class="service-name">ZAIA Essencial</span>
+                                <span class="service-price">R$ 2.700 (setup) + R$ 549/mês</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">ZAIA Avançada</span>
+                                <span class="service-price">R$ 3.800 (setup) + R$ 999/mês</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">ZAIA Completo</span>
+                                <span class="service-price">R$ 4.800 (setup) + R$ 1.499/mês</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Landing Pages</span>
+                                <span class="service-price">R$ 1.500 (valor médio)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="financial-card">
+                        <h3>Custos Fixos Mensais</h3>
+                        <div class="cost-breakdown">
+                            <div class="cost-category">
+                                <h4>Softwares/Infra</h4>
+                                <div class="cost-item">ZAIA: R$ 250,00</div>
+                                <div class="cost-item">Lovable: R$ 137,26</div>
+                                <div class="cost-item">Monday: R$ 198,00</div>
+                                <div class="cost-item">Microsoft: R$ 60,00</div>
+                                <div class="cost-item">Manus: R$ 104,29</div>
+                                <div class="cost-item">Tess: R$ 49,00</div>
+                                <div class="cost-total">Total: R$ 798,55</div>
+                            </div>
+                            
+                            <div class="cost-category">
+                                <h4>Estrutura</h4>
+                                <div class="cost-item">Aluguel: R$ 500,00</div>
+                                <div class="cost-item">Energia: R$ 200,00</div>
+                                <div class="cost-item">Internet: R$ 150,00</div>
+                                <div class="cost-item">Pró-labore: R$ 2.000,00</div>
+                                <div class="cost-total">Total: R$ 2.850,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projections-container">
+                    <h3>Projeções de 12 Meses</h3>
+                    <div class="scenario-tabs">
+                        <button class="scenario-tab active" data-scenario="pessimista">Pessimista</button>
+                        <button class="scenario-tab" data-scenario="realista">Realista</button>
+                        <button class="scenario-tab" data-scenario="otimista">Otimista</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunities Section -->
+        <section id="opportunities" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Oportunidades de Negócio</h2>
+                <p class="section-subtitle">Identificação de lacunas e potencial de crescimento no mercado</p>
+            </div>
+            
+            <div class="opportunities-content">
+                <div class="opportunity-highlight">
+                    <h3>Mercado em Expansão com Necessidades Específicas</h3>
+                    <p>A combinação de crescimento acelerado, disposição para investir e lacunas no mercado atual cria uma oportunidade excepcional para soluções especializadas.</p>
+                </div>
+                
+                <div class="opportunities-grid">
+                    <div class="opportunity-card high-potential">
+                        <div class="opportunity-icon">🎯</div>
+                        <h4>Automação Especializada</h4>
+                        <p>Desenvolver soluções de automação específicas para cada nicho, considerando suas particularidades e necessidades únicas.</p>
+                        <div class="opportunity-potential">Alto Potencial</div>
+                    </div>
+                    
+                    <div class="opportunity-card medium-potential">
+                        <div class="opportunity-icon">🎨</div>
+                        <h4>Landing Pages Otimizadas</h4>
+                        <p>Criar landing pages focadas em conversão para profissionais de saúde e fitness, com elementos específicos do setor.</p>
+                        <div class="opportunity-potential">Médio-Alto Potencial</div>
+                    </div>
+                    
+                    <div class="opportunity-card high-potential">
+                        <div class="opportunity-icon">🤖</div>
+                        <h4>IA para Gestão de Clientes</h4>
+                        <p>Implementar inteligência artificial para acompanhamento de pacientes/alunos e criação de conteúdo personalizado.</p>
+                        <div class="opportunity-potential">Alto Potencial</div>
+                    </div>
+                    
+                    <div class="opportunity-card high-potential">
+                        <div class="opportunity-icon">🔗</div>
+                        <h4>Integração de Ferramentas</h4>
+                        <p>Criar soluções que integrem diferentes ferramentas (CRM, agendamento, pagamento) em uma plataforma única.</p>
+                        <div class="opportunity-potential">Alto Potencial</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Section -->
+        <section id="strategy" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🚀 Estratégia de Entrada</h2>
+                <p class="section-subtitle">Plano de implementação e crescimento estruturado</p>
+            </div>
+            
+            <div class="strategy-content">
+                <div class="strategy-phases">
+                    <h3>Fases de Implementação</h3>
+                    <div class="phases-timeline">
+                        <div class="phase-item">
+                            <div class="phase-number">1</div>
+                            <div class="phase-content">
+                                <h4>Nutricionistas (Meses 1-6)</h4>
+                                <p>Iniciar com o segmento de nutricionistas devido ao maior número de profissionais e necessidades mais padronizadas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-item">
+                            <div class="phase-number">2</div>
+                            <div class="phase-content">
+                                <h4>Personal Trainers (Meses 7-12)</h4>
+                                <p>Expandir para personal trainers após validação e refinamento da proposta de valor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-item">
+                            <div class="phase-number">3</div>
+                            <div class="phase-content">
+                                <h4>Expansão (Ano 2+)</h4>
+                                <p>Escalar operações e explorar nichos adjacentes como psicólogos e fisioterapeutas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="value-proposition">
+                    <h3>Proposta de Valor Única</h3>
+                    <div class="value-grid">
+                        <div class="value-item">
+                            <h4>🎯 Especialização</h4>
+                            <p>Foco exclusivo em profissionais de saúde e fitness</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>🤖 Automação Inteligente</h4>
+                            <p>Soluções que realmente entendem o negócio do cliente</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>📈 Resultados Mensuráveis</h4>
+                            <p>Foco em ROI e métricas que importam</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>🎨 Design Especializado</h4>
+                            <p>Landing pages otimizadas para conversão no nicho</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Section -->
+        <section id="investment" class="section">
+            <div class="section-header">
+                <h2 class="section-title">💎 Análise de Investimento</h2>
+                <p class="section-subtitle">Justificativa detalhada do investimento de R$ 15.000 e projeção de retorno</p>
+            </div>
+            
+            <div class="investment-content">
+                <div class="investment-breakdown">
+                    <h3>Composição do Investimento</h3>
+                    <div class="investment-grid">
+                        <div class="investment-card">
+                            <h4>Investimento Inicial Único</h4>
+                            <div class="investment-amount">R$ 1.950</div>
+                            <ul class="investment-details">
+                                <li>Registro de domínio e hospedagem</li>
+                                <li>Ferramentas de marketing inicial</li>
+                                <li>Identidade visual e branding</li>
+                                <li>Setup de sistemas e integrações</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="investment-card highlight">
+                            <h4>Capital de Giro (3 meses)</h4>
+                            <div class="investment-amount">R$ 12.250</div>
+                            <ul class="investment-details">
+                                <li>Custos fixos: R$ 798,55/mês</li>
+                                <li>Estrutura: R$ 850,00/mês</li>
+                                <li>Pró-labore: R$ 2.000,00/mês</li>
+                                <li>Margem de segurança</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="investment-card">
+                            <h4>Margem de Segurança</h4>
+                            <div class="investment-amount">R$ 800</div>
+                            <ul class="investment-details">
+                                <li>Imprevistos operacionais</li>
+                                <li>Oportunidades de marketing</li>
+                                <li>Ajustes de estratégia</li>
+                                <li>Buffer adicional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="roi-analysis">
+                    <h3>Análise de Retorno (ROI)</h3>
+                    <div class="roi-scenarios">
+                        <div class="roi-card">
+                            <h4>Cenário Conservador</h4>
+                            <div class="roi-timeline">
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 3:</span>
+                                    <span class="roi-value">Break-even com 7 clientes Essencial</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 6:</span>
+                                    <span class="roi-value">ROI de 50% com 12 clientes</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Ano 1:</span>
+                                    <span class="roi-value">ROI de 200%+ com 20 clientes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-card highlight">
+                            <h4>Cenário Realista</h4>
+                            <div class="roi-timeline">
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 2:</span>
+                                    <span class="roi-value">Break-even com mix de planos</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 4:</span>
+                                    <span class="roi-value">ROI de 100% com crescimento consistente</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Ano 1:</span>
+                                    <span class="roi-value">ROI de 400%+ com 30+ clientes</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-card">
+                            <h4>Cenário Otimista</h4>
+                            <div class="roi-timeline">
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 1:</span>
+                                    <span class="roi-value">Break-even com clientes premium</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Mês 3:</span>
+                                    <span class="roi-value">ROI de 150% com crescimento acelerado</span>
+                                </div>
+                                <div class="roi-item">
+                                    <span class="roi-period">Ano 1:</span>
+                                    <span class="roi-value">ROI de 600%+ com 40+ clientes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="investment-conclusion">
+                    <h3>Conclusão do Investimento</h3>
+                    <div class="conclusion-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">✅</div>
+                            <div class="highlight-content">
+                                <h4>Risco Baixo</h4>
+                                <p>Mercado validado com demanda comprovada e crescimento consistente</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📈</div>
+                            <div class="highlight-content">
+                                <h4>Alto Potencial de Retorno</h4>
+                                <p>ROI projetado entre 200% e 600% no primeiro ano</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-content">
+                                <h4>Nicho Especializado</h4>
+                                <p>Posicionamento único em mercado com baixa concorrência especializada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-content">
+                                <h4>Escalabilidade</h4>
+                                <p>Modelo de negócio escalável com margem crescente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
